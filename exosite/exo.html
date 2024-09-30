@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="exo.css"/>
+    <style type="text/tailwindcss"></style>
+
+    <title> Zinzin </title>
+</head>
+
+<body>
+    <!DOCTYPE html>
+    <html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Rocket League Navigation</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+    </head>
+    <body class="bg-gray-900 text-white">
+    
+  
+    <nav class="flex justify-between items-center bg-gray-900 p-4">
+        <div class="flex items-center space-x-6">
+       
+            <img src="images/Epic_Games_logo.png" alt="Epic Games" class="h-6">
+            <img src="images/logo rocket.png" alt="Epic Games" class="h-14 my-5" >
+            <a href="#" class="text-white text-base hover:text-blue-300">Saison 9</a>
+            <a href="#" class="text-white text-base hover:text-blue-300">Rocket Pass</a>
+            <a href="#" class="text-white text-base hover:text-blue-300">Actus</a>
+            <a href="#" class="text-white text-base hover:text-blue-300">Assistance</a>
+            <div class="relative group">
+                <a href="#" class="text-white text-base hover:text-blue-300">Compétitive</a>
+                <div class="absolute hidden group-hover:block bg-gray-800 text-sm mt-1 py-2 shadow-lg">
+                </div>
+            </div>
+    
+            <a href="#" class="text-white text-base hover:text-blue-300">Sideswipe</a>
+        </div>
+        <div class="flex items-center space-x-4">
+            <div class="cursor-pointer">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white hover:text-gray-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+            </div>
+            <div class="cursor-pointer">
+            </div>
+            <a href="" class="bg-green-500 hover:bg-green-700 text-black font-bold py-2 px-4 rounded">
+                Jouer maintenant
+            </a>
+        </div>
+    </nav>
+            
+                 <video class= controls width="1600" autoplay muted playsinline loop  >
+                    <source src="images/Rocket League Season 9 Trailer.mp4" type="video/mp4">
+                    <track label="English" kind="subtitles" srclang="en" src="clickthrough.vtt" default>
+                
+                    
+                </video>
+                
+                <h2 class=" my-14 text-5xl text-center underline text-gray-200 font-bold"> Voici Rocket League ! </h2>
+                    <h3 class=" my-16 py-16 mx-8 px-6 text-3xl text-center text-gray-400 "> Bienvenue dans un mélange détonnant de football d'arcade et de chaos motorisé ! <br> Personnalisez votre voiture, lancez-vous sur le terrain, et participez à l'un des jeux de sport les plus acclamés par la critique ! </h3>   
+
+                <img src="images/Rlsaison16.png" alt="terrain rl" > 
+
+                    <!-- Carrousel -->
+        <div class="relative overflow-hidden">
+            <!-- Slides -->
+            <div id="carouselSlides" class="flex transition-transform duration-500">
+                <div class=" min-w-full bg-black flex justify-end items-center h-96 columns-1  ">
+                <h3 class="columns-auto  text-gray-300 text-center text-2xl italic"> Montez de niveau <br> Atteignez le niveau 70 et au-delà ! Commencez à déverrouiller des objets des niveaux pro pour obtenir des versions peintes de divers objets du Rocket Pass.
+                    </h3> <img src="images/Carou1.webp">
+                </div>
+                <div class="min-w-full bg-gray-800 flex justify-end items-center h-96 columns-1">
+                    <h3 class="columns-auto  text-gray-300 text-center text-2xl italic"> Montez de niveau <br> Atteignez le niveau 70 et au-delà ! Commencez à déverrouiller des objets des niveaux pro pour obtenir des versions peintes de divers objets du Rocket Pass.
+                    </h3> <img src="images/carou2.webp"> 
+                </div>
+               
+                <div class="min-w-full bg-cyan-500 flex justify-end items-center h-96 columns-1">
+                    <h3 class="columns-auto  text-gray-300 text-center text-2xl italic"> Montez de niveau <br> Atteignez le niveau 70 et au-delà ! Commencez à déverrouiller des objets des niveaux pro pour obtenir des versions peintes de divers objets du Rocket Pass.
+                    </h3> <img src="images/carou3.webp"> 
+                </div>
+            </div>
+
+            <!-- Navigation Buttons -->
+            <button id="prevButton" class="absolute left-80 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full focus:outline-none">
+                &#10094;
+            </button>
+            <button id="nextButton" class="absolute right-10 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full focus:outline-none">
+                &#10095;
+            </button>
+    </div>
+    <script>
+        const slides = document.getElementById('carouselSlides');
+        const totalSlides = slides.children.length;
+        let currentSlide = 0;
+
+        document.getElementById('nextButton').addEventListener('click', () => {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            updateCarousel();
+        });
+
+        document.getElementById('prevButton').addEventListener('click', () => {
+            currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+            updateCarousel();
+        });
+
+        function updateCarousel() {
+            slides.style.transform = `translateX(-${currentSlide * 100}%)`;
+        }
+    </script>
+    
+    <div class=" min-w-full bg-orange-500 flex flex-row-reverse items-center h-96 columns-2 my-36 ">
+            <h3 class="columns-auto  text-gray-300 text-center text-2xl tracking-wide size  "> <div class="underline text-3xl text-center text-gray-200 italic"> Progression <br> Multiplateforme  </div>  <br> Partagez votre inventaire Rocket League, votre classement compétitif, et votre Rocket Pass tiers sur toutes vos plateformes connectées !
+            </h3> <img src="images/Rlprime.png">
+    </div>
+
+
+    </body>
+    </html>
